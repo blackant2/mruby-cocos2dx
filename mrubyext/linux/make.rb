@@ -42,7 +42,7 @@ include_paths=%w(../ext)
 
 
 lib_paths<<"#{MRUBY_ROOT}/build/host/lib"
-lib_paths<<"#{COCOS_ROOT}/linux/lib"
+lib_paths<<"#{File.dirname(__FILE__)}/../../linux/lib"
 include_paths<<"#{COCOS_ROOT}/cocos/platform/linux"
 include_paths<<"#{MRUBY_ROOT}/include"
 include_paths<<"#{COCOS_ROOT}/cocos"

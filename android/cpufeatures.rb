@@ -45,39 +45,3 @@ LOCAL_SRC_FILES.each do |f|
 end
 puts sh
 system sh
-=begin
-[armeabi] Compile thumb  : cpufeatures <= cpu-features.c
-/home/ker/ndk/toolchains/llvm-3.4/prebuilt/linux-x86_64/bin/clang
--MMD -MP -MF ./obj/local/armeabi/objs/cpufeatures/cpu-features.o.d 
--gcc-toolchain #{NDK_ROOT}/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64
--fpic
--ffunction-sections
--funwind-tables
--fstack-protector
--no-canonical-prefixes
--target armv5te-none-linux-androideabi
--march=armv5te
--mtune=xscale
--msoft-float
--mthumb
--Os
--g
--DNDEBUG
--fomit-frame-pointer
--fno-strict-aliasing
--I#{NDK_ROOT}/sources/android/cpufeatures
--DANDROID 
--Wa,--noexecstack
--Wformat
--Werror=format-security   
--I#{NDK_ROOT}/platforms/android-14/arch-arm/usr/include
--c  #{NDK_ROOT}/sources/android/cpufeatures/cpu-features.c
--o ./obj/local/armeabi/objs/cpufeatures/cpu-features.o 
-[armeabi] StaticLibrary  : libcpufeatures.a
-rm
--f obj/local/armeabi/libcpufeatures.a
-/home/ker/ndk/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar
-crsD ./obj/local/armeabi/libcpufeatures.a
-./obj/local/armeabi/objs/cpufeatures/cpu-features.o
-
-=end
