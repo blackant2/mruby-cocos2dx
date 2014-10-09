@@ -1,0 +1,4 @@
+linux/lib/
+linux/objs/
+mrubyext/linux/main
+mrubyext/linux/objs/
