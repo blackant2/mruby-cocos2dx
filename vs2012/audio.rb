@@ -12,34 +12,33 @@ sh=<<CMD
 cl /c 
 /I"C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v7.1A\\include"
 /I#{COCOS_ROOT}\\cocos\\audio\\Include
-/I#{COCOS_ROOT}\\cocos\\2d\\..\\..\\cocos 
-/I#{COCOS_ROOT}\\cocos\\2d\\..\\..\\cocos\\platform\\win32 
-/I#{COCOS_ROOT}\\cocos\\2d\\..\\..\\cocos\\platform\\desktop 
-/I#{COCOS_ROOT}\\cocos\\2d\\..\\..\\external\\glfw3\\include\\win32 
-/I"#{COCOS_ROOT}\\cocos\\2d\\..\\..\\external\\win32-specific\\gles\\include\\OGLES"  
-/W3 
-/WX- 
-/MP 
-/O1 
-/Oy- 
-/D WIN32 
-/D NDEBUG 
-/D _WINDOWS 
-/D _CRT_SECURE_NO_WARNINGS 
-/D _VARIADIC_MAX=10 
-/D _USING_V110_SDK71_ 
-/Gm- 
-/EHsc 
-/MD 
-/GS 
-/fp:precise 
-/Zc:wchar_t 
-/Zc:forScope 
-
-/Gd 
-/TP 
-/wd4251 
-/analyze- 
+/I#{COCOS_ROOT}\\cocos
+/I#{COCOS_ROOT}\\cocos\\platform\\win32
+/I#{COCOS_ROOT}\\cocos\\platform\\desktop
+/I#{COCOS_ROOT}\\external\\glfw3\\include\\win32
+/I"#{COCOS_ROOT}\\external\\win32-specific\\gles\\include\\OGLES"
+/W3
+/WX-
+/MP
+/O1
+/Oy-
+/D WIN32
+/D NDEBUG
+/D _WINDOWS
+/D _CRT_SECURE_NO_WARNINGS
+/D _VARIADIC_MAX=10
+/D _USING_V110_SDK71_
+/Gm-
+/EHsc
+/MD
+/GS
+/fp:precise
+/Zc:wchar_t
+/Zc:forScope
+/Gd
+/TP
+/wd4251
+/analyze-
 /errorReport:prompt
 CMD
 
@@ -55,7 +54,6 @@ LOCAL_SRC_FILES.each do |f|
 	cmd= sh+"/Fo"".\\objs\\#{LIB_NAME}\\\\"" "+" #{COCOS_ROOT}\\cocos\\audio\\win32\\"+f
 	puts cmd
 	system cmd 
-	break
 end
 
 
