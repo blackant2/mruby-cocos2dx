@@ -1,4 +1,6 @@
 linux/lib/
 linux/objs/
+vs2012/lib/
+vs2012/objs/
 mrubyext/linux/main
 mrubyext/linux/objs/
